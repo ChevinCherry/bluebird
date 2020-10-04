@@ -34,30 +34,30 @@ export const TweetDashboard = () => {
   };
 
   useEffect(() => {
-    if (!Worker) {
-      // Non WebWorker implementation
-      const handleData = (response: ITweetResponse) => {
-        if (response.lang !== "en") return;
-        dispatch({
-          type: TweetDashboardActions.ADD_TWEET,
-          payload: createTweetFromResponse(response),
-        });
-      };
-      const pubnub = new PubNub({
-        subscribeKey: "sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe",
-        ssl: true,
-      });
-      pubnub.addListener({
-        message: (event) => handleData(event.message),
-      });
-      pubnub.subscribe({
-        channels: ["pubnub_onboarding_channel"],
-      });
-      return () =>
-        pubnub.unsubscribe({
-          channels: ["pubnub_onboarding_channel"],
-        });
-    }
+    // if (!Worker) {
+    //   // Non WebWorker implementation
+    //   const handleData = async (response: ITweetResponse) => {
+    //     if (response.lang !== "en") return;
+    //     dispatch({
+    //       type: TweetDashboardActions.ADD_TWEET,
+    //       payload: await createTweetFromResponse(response),
+    //     });
+    //   };
+    //   const pubnub = new PubNub({
+    //     subscribeKey: "sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe",
+    //     ssl: true,
+    //   });
+    //   pubnub.addListener({
+    //     message: (event) => handleData(event.message),
+    //   });
+    //   pubnub.subscribe({
+    //     channels: ["pubnub_onboarding_channel"],
+    //   });
+    //   return () =>
+    //     pubnub.unsubscribe({
+    //       channels: ["pubnub_onboarding_channel"],
+    //     });
+    // }
 
     worker.onmessage = (event: MessageEvent) => {
       dispatch({type: TweetDashboardActions.ADD_TWEET, payload: event.data});

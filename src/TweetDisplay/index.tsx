@@ -30,7 +30,9 @@ const Tweet = ({tweet}: {tweet: ITweet}) => {
         <span className={styles.name}>{tweet.name}</span>
         <span className={styles.secondary}>{` @${tweet.username}`}</span>
         <div className={styles.secondary}>
-          {`${relativeTime} seconds ago · Valence: ${tweet.sentiment}`}
+          {`${relativeTime} seconds ago · Validity: ${
+            tweet.sentiment < 0 ? "fake" : "true"
+          }`}
         </div>
       </div>
       <div className={styles.text}>{tweet.text}</div>

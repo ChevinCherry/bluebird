@@ -3,7 +3,7 @@ import Axios from "axios";
 var emojiText = require("emoji-text");
 
 // Return a normalized score between -1 and 1 representing relative sentiment
-export const calculateSentiment = (text: string): number => {
+export const calculateSentiment = async (text: string): Promise<number> => {
   // TODO: This doesn't handle chained emojis properly
   const parsedText = emojiText.convert(text, {
     delimiter: " ",
@@ -11,12 +11,12 @@ export const calculateSentiment = (text: string): number => {
   });
   const apiRoute = `https://cors-anywhere.herokuapp.com/http://34.123.199.55/predict_tweet`;
   let fake = 0;
-  Axios.put(apiRoute, {tweet: text}).then((res) => {
+  await Axios.post(apiRoute, {tweet: parsedText}).then((res) => {
     if (res.status >= 400) {
       console.log(res.status + res.statusText);
     }
-    const object = res.data;
-    if ((object.result = "fake")) {
+    console.log(res.data.result);
+    if (res.data.result === "fake") {
       fake = -1;
     } else {
       fake = 1;

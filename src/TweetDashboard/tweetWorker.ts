@@ -17,11 +17,11 @@ const pubnub = new PubNub({
   ssl: true,
 });
 
-const handleData = (response: ITweetResponse) => {
+const handleData = async (response: ITweetResponse) => {
   if (response.lang !== "en") return;
 
   // TODO: Handle neutral tweets?
-  const tweet = createTweetFromResponse(response);
+  const tweet = await createTweetFromResponse(response);
   ctx.postMessage(tweet);
 };
 
