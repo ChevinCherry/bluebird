@@ -4,7 +4,10 @@ Most fake news detection datasets provide full news articles. Since we wanted to
 
 **Fake-Tweet-Visualizer** is based on **bluebird** (see upstream remote) and conducts analysis and visualizes tweets being sent on Twitter in Real-Time. 
 
-Live link to the application coming soon!
+# Try it Out!
+
+Live link to application:
+http://45de65bae29c.ngrok.io/
 
 ## Demo
 ![Demo GIF](demo.gif)
