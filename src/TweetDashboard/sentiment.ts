@@ -22,6 +22,7 @@ export const calculateSentiment = async (text: string): Promise<number> => {
       fake = 1;
     }
   });
+
   return fake;
 };
 

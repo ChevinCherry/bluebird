@@ -24,7 +24,7 @@ const GaugeDisplay = React.memo(({percentage}: {percentage: number}) => (
     id="gauge"
     className={styles.gauge}
     nrOfLevels={NO_OF_COLOURS}
-    percent={percentage * 2}
+    percent={percentage}
     hideText={true}
     animDelay={0}
     arcWidth={0.25}
