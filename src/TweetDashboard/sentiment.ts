@@ -9,7 +9,7 @@ export const calculateSentiment = async (text: string): Promise<number> => {
     delimiter: " ",
     field: "description",
   });
-  const apiRoute = `https://cors-anywhere.herokuapp.com/http://34.123.199.55/predict_tweet`;
+  const apiRoute = `http://34.123.199.55/predict_tweet`;
   let fake = 0;
   await Axios.post(apiRoute, {tweet: parsedText}).then((res) => {
     if (res.status >= 400) {
