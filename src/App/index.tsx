@@ -5,33 +5,11 @@ import {TweetDashboard} from "../TweetDashboard";
 const App = () => (
   <>
     <header className={styles.header}>
-      <h1 className={styles.bluebird}>bluebird</h1>
+      <h1 className={styles.bluebird}>Fake or Real?</h1>
       <div className={styles.desc}>
-        <p>350,000 tweets are sent on Twitter every minute. </p>
         <p>
-          Just imagine that: 350,000 unique thoughts from different people
-          around the world.
-        </p>
-        <p>
-          <span className={styles.bluebird}>bluebird</span> aims to offer a
-          glimpse into the sheer size of Twitter as a social network. Every
-          bubble you see below represents a tweet that has just been posted in
-          the last few seconds. Its colour signifies its sentiment from the
-          colour range of blue to yellow (calculated based on&nbsp;
-          <a
-            target="_blank"
-            rel="noreferrer noopener"
-            href="http://comp.social.gatech.edu/papers/icwsm14.vader.hutto.pdf"
-          >
-            VADER
-          </a>
-          )&nbsp;while its size corresponds to the length of the tweet. The
-          average sentiment of all processed tweets during your current session
-          is also calculated.
-        </p>
-        <p>
-          Play around with this real-time, constant stream of tweets and its
-          corresponding metrics!
+          Thousands of news reports are released daily, but how many are
+          actually factual? Don't speculate, let a trained brain decide for you
         </p>
       </div>
     </header>

@@ -61,7 +61,7 @@ export const TweetGauge = ({
     <div className={`${styles.container} ${className ? className : ""}`}>
       <GaugeDisplay percentage={roundedPercentage} />
       <div className={styles.text}>
-        Average sentiment:&nbsp;
+        News Accuracy:&nbsp;
         <strong>{sentimentPercentage}</strong>
       </div>
     </div>

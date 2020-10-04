@@ -13,7 +13,7 @@ importScripts("https://cdn.pubnub.com/sdk/javascript/pubnub.4.28.0.min.js");
 // Imported dynamically from above
 // @ts-ignore
 const pubnub = new PubNub({
-  subscribeKey: "sub-c-78806dd4-42a6-11e4-aed8-02ee2ddab7fe",
+  subscribeKey: "sub-c-9eeb2ca4-0607-11eb-ac24-4e38869d876d",
   ssl: true,
 });
 
@@ -29,12 +29,12 @@ ctx.onmessage = (msg: MessageEvent) => {
   switch (msg.data) {
     case WorkerActions.START:
       pubnub.subscribe({
-        channels: ["pubnub-twitter"],
+        channels: ["pubnub_onboarding_channel"],
       });
       break;
     case WorkerActions.STOP:
       pubnub.unsubscribe({
-        channels: ["pubnub-twitter"],
+        channels: ["pubnub_onboarding_channel"],
       });
   }
 };
@@ -43,5 +43,5 @@ pubnub.addListener({
   message: (event: ITweetEvent) => handleData(event.message),
 });
 pubnub.subscribe({
-  channels: ["pubnub-twitter"],
+  channels: ["pubnub_onboarding_channel"],
 });

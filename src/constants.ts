@@ -1,4 +1,4 @@
-export const COLOUR_SCALE = ["#36a9e3", "#ebd74b"];
+export const COLOUR_SCALE = ["#FF0000", "#00FF00"];
 export const SCALE_MODE = "rgb";
 export const SENTIMENT_RANGE = 1;
 

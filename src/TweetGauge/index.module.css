@@ -15,10 +15,11 @@
 }
 
 .gauge g {
-  stroke: black;
+  stroke: white;
   stroke-width: 0px;
 }
 
 .text {
   font-size: 1.2rem;
+  color: wheat;
 }

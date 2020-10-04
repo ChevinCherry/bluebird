@@ -51,11 +51,11 @@ export const TweetDashboard = () => {
         message: (event) => handleData(event.message),
       });
       pubnub.subscribe({
-        channels: ["pubnub-twitter"],
+        channels: ["pubnub_onboarding_channel"],
       });
       return () =>
         pubnub.unsubscribe({
-          channels: ["pubnub-twitter"],
+          channels: ["pubnub_onboarding_channel"],
         });
     }
 
