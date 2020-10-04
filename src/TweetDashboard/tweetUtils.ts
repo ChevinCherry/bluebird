@@ -11,6 +11,8 @@ export const createTweetFromResponse = (message: ITweetResponse): ITweet => {
   // Stream only returns first 140 characters in "text" prop if the tweet length exceeds that
   const text = message.extended_tweet
     ? message.extended_tweet.full_text
+    : message.retweeted_status && message.retweeted_status.extended_tweet
+    ? message.retweeted_status.extended_tweet.full_text
     : message.text;
 
   const sanitizedText = text

@@ -1,4 +1,5 @@
-const vader = require("vader-sentiment");
+import Axios from "axios";
+
 var emojiText = require("emoji-text");
 
 // Return a normalized score between -1 and 1 representing relative sentiment
@@ -8,7 +9,20 @@ export const calculateSentiment = (text: string): number => {
     delimiter: " ",
     field: "description",
   });
-  return vader.SentimentIntensityAnalyzer.polarity_scores(parsedText).compound;
+  const apiRoute = `https://cors-anywhere.herokuapp.com/http://34.123.199.55/predict_tweet`;
+  let fake = 0;
+  Axios.put(apiRoute, {tweet: text}).then((res) => {
+    if (res.status >= 400) {
+      console.log(res.status + res.statusText);
+    }
+    const object = res.data;
+    if ((object.result = "fake")) {
+      fake = -1;
+    } else {
+      fake = 1;
+    }
+  });
+  return fake;
 };
 
 // Unused; requires 'sentiment' library

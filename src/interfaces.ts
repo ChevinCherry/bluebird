@@ -3,6 +3,7 @@ export interface ITweetEvent {
 }
 
 export interface ITweetResponse {
+  retweeted_status?: {extended_tweet?: {full_text: string}};
   extended_tweet?: {full_text: string};
   text: string;
   user: {

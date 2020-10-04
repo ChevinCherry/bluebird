@@ -46,8 +46,9 @@ const App = () => (
         >
           Front-end repository
         </a>
+        &nbsp;|&nbsp;
         <a
-          href="https://github.com/ChevinCherry/bluebird"
+          href="https://github.com/preyansh98/Fake-Tweet-Detection"
           target="_blank"
           rel="noopener noreferrer"
         >
