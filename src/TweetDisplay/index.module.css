@@ -7,7 +7,7 @@
 .tweet {
   text-align: left;
   text-decoration: none;
-  color: wheat;
+  color: white;
   overflow-y: auto;
   overflow-x: hidden;
 
@@ -39,7 +39,7 @@
 }
 
 .secondary {
-  color: burlywood;
+  color: lightgray;
   font-size: 1.1rem;
 }
 
@@ -48,5 +48,5 @@
   padding-top: 7rem;
   text-align: center;
   font-style: italic;
-  color: wheat;
+  color: white;
 }

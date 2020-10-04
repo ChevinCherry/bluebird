@@ -9,7 +9,7 @@ const App = () => (
       <div className={styles.desc}>
         <p>
           Thousands of news reports are released daily, but how many are
-          actually factual? Don't speculate, let a trained brain decide for you
+          actually factual? Don't speculate, let a trained brain decide for you.
         </p>
       </div>
     </header>
