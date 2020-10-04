@@ -36,7 +36,25 @@ const App = () => (
       ></path>
     </svg> */}
     <footer className={styles.footer}>
-      © 2020 —&nbsp;
+      <div>
+        Repurposed by Peter Ball, Julie Tian, Preyansh Kaushik and Kevin Cherry
+        for MAIS Hacks 2020 —&nbsp;|&nbsp;
+        <a
+          href="https://github.com/ChevinCherry/bluebird"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Front-end repository
+        </a>
+        <a
+          href="https://github.com/ChevinCherry/bluebird"
+          target="_blank"
+          rel="noopener noreferrer"
+        >
+          Back-end repository
+        </a>
+      </div>
+      Original - © 2020 —&nbsp;
       <a href="https://isaacong.me" target="_blank" rel="noopener noreferrer">
         Isaac Ong
       </a>
