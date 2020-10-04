@@ -8,3 +8,7 @@ Live link to the application coming soon!
 
 ## Demo
 ![Demo GIF](demo.gif)
+
+## Backend
+
+The backend is hosted at : https://github.com/preyansh98/Fake-Tweet-Detection
